@@ -33,7 +33,3 @@ if [ "$TARGET_CPU" == "x86" ]; then
     # g++-multilib ставим в самом конце, после i386-пакетов!
     sudo apt-get install -y g++-5-multilib
 fi
-
-#удаление лишних данных в логах сборки
-del "c:\Program Files (x86)\MSBuild\14.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets"
-del "c:\Program Files (x86)\MSBuild\4.0\Microsoft.Common.targets\ImportAfter\Xamarin.Common.targets"
