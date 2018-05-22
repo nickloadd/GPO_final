@@ -6,7 +6,7 @@ sudo apt-get update -qq
 sudo apt-get install -qq g++-5
 sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
 
-#установка 11 версии CMake
+#установка 3.3.2 версии CMake
 CMAKE_VERSION=3.3.2
 CMAKE_VERSION_DIR=v3.3
 
