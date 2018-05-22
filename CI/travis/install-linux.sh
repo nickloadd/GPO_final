@@ -21,15 +21,15 @@ tar --strip-components=1 -xzf $CMAKE_TAR -C $CMAKE_DIR
 export PATH=$CMAKE_DIR/bin:$PATH
 
 #установка  multilib для поддержки кросс-компиляции amd64->x86
-if [ "$TARGET_CPU" == "x86" ]; then
-    sudo dpkg --add-architecture i386
-    sudo apt-get -qq update
+#if [ "$TARGET_CPU" == "x86" ]; then
+#    sudo dpkg --add-architecture i386
+#    sudo apt-get -qq update
 
     # устанавливаем 32-битные версии необходимых проекту библиотек
-    sudo apt-get install -y liblua5.2-dev:i386
-    sudo apt-get install -y libusb-1.0:i386
+#    sudo apt-get install -y liblua5.2-dev:i386
+#    sudo apt-get install -y libusb-1.0:i386
     # ...
 
     # g++-multilib ставим в самом конце, после i386-пакетов!
-    sudo apt-get install -y g++-5-multilib
-fi
+ #   sudo apt-get install -y g++-5-multilib
+#fi
