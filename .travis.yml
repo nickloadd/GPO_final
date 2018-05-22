@@ -1,0 +1,44 @@
+dist:     trusty   # используем Ubuntu 14.04 Trusty Tahr 
+sudo:     required # используем VM
+
+language: cpp      # используем с++ 
+                   
+os:
+    # выполнение сборки на Linux 
+    - linux
+
+compiler:
+    # c помощью GCC, Clang
+    - gcc
+    - clang
+
+env:
+     # список переменных окружения (разрядность платформы и конфигурация)
+    - TARGET_CPU=amd64 BUILD_CONFIGURATION=Debug
+    - TARGET_CPU=amd64 BUILD_CONFIGURATION=Release
+    - TARGET_CPU=x86 BUILD_CONFIGURATION=Debug
+    - TARGET_CPU=x64 BUILD_CONFIGURATION=Release
+
+install:
+    # скрипт настройки среды и установки зависимостей:
+    - source CI/travis/install-linux.sh
+
+script:
+    # скрипт сборки и тестирования проекта:
+    - mkdir build
+    - cd build
+    - cmake .. -DCMAKE_BUILD_TYPE=$BUILD_CONFIGURATION -DTARGET_CPU=$TARGET_CPU
+    - cmake --build .
+
+deploy:
+    provider:     releases
+    
+    api_key:
+        secure: encrypted-github-token
+    file:         
+    - file1.pkg
+    
+    skip_cleanup: true
+
+    on:
+        tags:     true
