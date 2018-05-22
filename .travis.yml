@@ -9,7 +9,6 @@ os:
 
 compiler:
     # c помощью GCC, Clang
-    - GCC
     - clang
 branches:
   only:
