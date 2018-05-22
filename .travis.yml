@@ -9,7 +9,7 @@ os:
 
 compiler:
     # c помощью GCC, Clang
-    - MinGW
+    - GCC
     - clang
 branches:
   only:
