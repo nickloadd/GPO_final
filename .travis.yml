@@ -10,7 +10,7 @@ os:
 compiler:
     # c помощью GCC, Clang
     - G++
-    #- clang
+    - clang
 branches:
   only:
   - master
