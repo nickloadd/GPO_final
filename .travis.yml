@@ -8,7 +8,7 @@ os:
     - linux
 
 compiler:
-    # c помощью GCC, Clang
+    # c помощью G++, Clang
     - G++
     - clang
 branches:
