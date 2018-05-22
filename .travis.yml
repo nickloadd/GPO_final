@@ -19,8 +19,8 @@ env:
      # список переменных окружения (разрядность платформы и конфигурация)
     - TARGET_CPU=amd64 BUILD_CONFIGURATION=Debug
     - TARGET_CPU=amd64 BUILD_CONFIGURATION=Release
-    - TARGET_CPU=x86 BUILD_CONFIGURATION=Debug
-    - TARGET_CPU=x86 BUILD_CONFIGURATION=Release
+    - TARGET_CPU=i386 BUILD_CONFIGURATION=Debug
+    - TARGET_CPU=i386 BUILD_CONFIGURATION=Release
 
 install:
     # скрипт настройки среды и установки зависимостей:
