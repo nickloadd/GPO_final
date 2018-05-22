@@ -11,6 +11,9 @@ compiler:
     # c помощью GCC, Clang
     - gcc
     - clang
+branches:
+  only:
+  - master
 
 env:
      # список переменных окружения (разрядность платформы и конфигурация)
